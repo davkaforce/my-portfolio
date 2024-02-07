@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="w-[1440px] h-[962px]  bg-gray-50  p-96 justify-between items-start self-stretch px-20 py-24">
-      <div className="flex bg-gray-50 flex-col justify-center items-center self-stretch gap-12">
+    <div className="flex text-wrap p-96 justify-between items-start  px-20 py-24">
+      <div className="flex flex-col justify-center items-center gap-12">
         <svg
           width="106"
           height="28"
@@ -15,22 +15,19 @@ export default function About() {
             fill="#4B5563"
           />
         </svg>
-        <div className="flex items-start gap-12 self-stretch flex-wrap">
-          <div className="flex min-w-[444px] flex-col items-start gap-6 flex-[1_0_0] self-stretch"></div>
-        </div>
-        <div className="flex items-start gap-12 self-stretch flex-wrap">
-          <div className="w-[584px] h-[694px] flex-col justify-start items-start inline-flex">
+        <div className="flex flex-col sm:flex-row items-start gap-12  ">
+          <div className=" flex-col justify-start items-start inline-flex">
             <div className="w-[440px] h-[520px] relative">
-              <div className="w-[400px] h-[480px] left-0 top-[40px] absolute bg-gray-200 border-8 border-gray-50" />
+              <div className="h-[480px] left-0 top-[40px] absolute border-8 border-gray-50" />
               <img
                 className="w-[400px] h-[480px] left-[40px] top-0 absolute border-8 border-gray-50"
                 src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e51d70b0-71fc-470d-a081-0a21eb1dcdc6/df3lfle-bcb59deb-8571-43c0-89ac-76332f371002.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2U1MWQ3MGIwLTcxZmMtNDcwZC1hMDgxLTBhMjFlYjFkY2RjNlwvZGYzbGZsZS1iY2I1OWRlYi04NTcxLTQzYzAtODlhYy03NjMzMmYzNzEwMDIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.ilRxJn2EO_NKPgaLQz2pXedfh36Q1lw9vhxY6CWKR_Y"
               />
             </div>
           </div>
-          <div className="flex min-w-[444px] flex-col items-start gap-6 flex-[1_0_0] self-stretch">
-            <span>Curious about me? Here you have it:</span>
-            <span className="self-stretch text-[color:var(--Gray-600,#4B5563)] text-base not-italic font-normal leading-6">
+          <div className="flex flex-wrap flex-col gap-6 ">
+            {/* <span>Curious about me? Here you have it:</span> */}
+            <span className=" text-[color:var(--Gray-600,#4B5563)] not-italic font-normal text-wrap ">
               I'm a passionate, self-proclaimed designer who specializes in full
               stack development (React.js & Node.js). I am very enthusiastic
               about bringing the technical and visual aspects of digital
@@ -38,7 +35,7 @@ export default function About() {
               writing clear, readable, highly performant code matters to me.
             </span>
 
-            <span className="self-stretch text-[color:var(--Gray-600,#4B5563)] text-base not-italic font-normal leading-6">
+            <span className=" text-[color:var(--Gray-600,#4B5563)]  not-italic font-normal ">
               I began my journey as a web developer in 2015, and since then,
               I've continued to grow and evolve as a developer, taking on new
               challenges and learning the latest technologies along the way.
@@ -47,7 +44,7 @@ export default function About() {
               using modern technologies such as Next.js, TypeScript, Nestjs,
               Tailwindcss, Supabase and much more.
             </span>
-            <span className="self-stretch text-[color:var(--Gray-600,#4B5563)] text-base not-italic font-normal leading-6">
+            <span className=" text-[color:var(--Gray-600,#4B5563)] text-base not-italic font-normal ">
               When I'm not in full-on developer mode, you can find me hovering
               around on twitter or on indie hacker, witnessing the journey of
               early startups or enjoying some free time. You can follow me on
@@ -57,20 +54,20 @@ export default function About() {
             <div className="text-gray-600 text-base font-normal font-['Inter'] leading-normal">
               Finally, some quick bits about me.
             </div>
-            <div className="w-[584px] h-[58px] justify-start items-start gap-2.5 inline-flex">
-              <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                <div className="self-stretch text-gray-600 text-base font-normal font-['Inter'] leading-normal">
+            <div className="justify-start items-start gap-2.5 inline-flex">
+              <div className=" basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
+                <div className=" text-gray-600 text-base font-normal font-['Inter'] ">
                   B.E. in Computer Engineering
                 </div>
-                <div className="self-stretch text-gray-600 text-base font-normal font-['Inter'] leading-normal">
+                <div className=" text-gray-600 text-base font-normal font-['Inter'] ">
                   Full time freelancer
                 </div>
               </div>
-              <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                <div className="self-stretch text-gray-600 text-base font-normal font-['Inter'] leading-normal">
+              <div className="basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
+                <div className=" text-gray-600 text-base font-normal font-['Inter'] ">
                   Avid learner
                 </div>
-                <div className="self-stretch text-gray-600 text-base font-normal font-['Inter'] leading-normal">
+                <div className=" text-gray-600 text-base font-normal font-['Inter'] ">
                   Aspiring indie hacker
                 </div>
               </div>

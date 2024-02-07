@@ -1,17 +1,23 @@
 import Link from "next/link";
+import { useTheme } from "@/content/ThemeContext";
+import LightIcon from "./Icons/LightIcon";
+import DarkIcon from "./Icons/DarkIcon";
 
 export default function Header() {
+  const { theme, setTheme } = useTheme();
+  const changeTheme = () => {
+    return theme == "dark" ? setTheme("light") : setTheme("dark");
+  };
   return (
-    <div className=" bg-white w-[1440px] h-[68px] flex justify-between items-center self-stretch px-20 py-4 border-b-[rgba(255,255,255,0.00)] border-b border-solid">
+    <div
+      className={` ${
+        theme == "dark" ? "" : ""
+      } flex flex-col sm:flex-row justify-between items-center self-stretch px-20 py-4 border-b-[rgba(255,255,255,0.00)] border-b border-solid `}
+    >
       <div className="text-[color:var(--Gray-900,#111827)] text-center text-3xl not-italic font-bold leading-9 tracking-[-0.6px]">
         {"<SS />"}
       </div>
-      <div className="text-[color:var(--Gray-600,#4B5563)] text-base not-italic font-medium leading-6 flex justify-center items-center gap-6">
-        {" "}
-        <Link href={""}>About</Link>
-        <Link href={""}>Work</Link>
-        <Link href={""}>Testimonials</Link>
-        <Link href={""}>Contact</Link>
+      <div>
         <svg
           width="36"
           height="36"
@@ -20,69 +26,39 @@ export default function Header() {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            d="M18 22C20.2091 22 22 20.2091 22 18C22 15.7909 20.2091 14 18 14C15.7909 14 14 15.7909 14 18C14 20.2091 15.7909 22 18 22Z"
-            stroke="#4B5563"
+            d="M10 18H26"
+            stroke="#D1D5DB"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
-            d="M18 8V10"
-            stroke="#4B5563"
+            d="M10 12H26"
+            stroke="#D1D5DB"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
           <path
-            d="M18 26V28"
-            stroke="#4B5563"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M10.9299 10.93L12.3399 12.34"
-            stroke="#4B5563"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M23.6599 23.66L25.0699 25.07"
-            stroke="#4B5563"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M8 18H10"
-            stroke="#4B5563"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M26 18H28"
-            stroke="#4B5563"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M12.3399 23.66L10.9299 25.07"
-            stroke="#4B5563"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M25.0699 10.93L23.6599 12.34"
-            stroke="#4B5563"
+            d="M10 24H26"
+            stroke="#D1D5DB"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
         </svg>
+      </div>
+      <div className="hidden sm:flex text-[color:var(--Gray-600,#4B5563)] text-base not-italic font-medium leading-6  justify-center items-center gap-6">
+        {" "}
+        <Link href={""}>About</Link>
+        <Link href={""}>Work</Link>
+        <Link href={""}>Testimonials</Link>
+        <Link href={"#contact"}>Contact</Link>
+        <div onClick={changeTheme}>
+          {/* <LightIcon />
+          <DarkIcon /> */}
+          {theme == "light" ? <LightIcon /> : <DarkIcon />}
+        </div>
         <svg
           width="136"
           height="36"

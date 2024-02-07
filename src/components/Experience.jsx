@@ -1,6 +1,13 @@
+import { useTheme } from "@/content/ThemeContext";
+
 export default function Experience() {
+  const { theme } = useTheme();
   return (
-    <div className="flex flex-col bg-gray-50 justify-center items-center self-stretch px-20 py-24">
+    <div
+      className={` ${
+        theme == "dark" ? "" : " bg-gray-50 "
+      }   flex flex-col justify-center items-center self-stretch px-20 py-24`}
+    >
       <div className="flex flex-col justify-center items-center gap-4 self-stretch px-8 py-0">
         <div className="flex flex-col justify-center items-center self-stretch">
           <svg
@@ -22,7 +29,7 @@ export default function Experience() {
             Here is a quick summary of my most recent experiences:
           </div>
         </div>
-        <div className="w-[896px] h-72 p-8 bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">
+        <div className=" h-72 p-8 bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">
           <div className="self-stretch justify-start items-start gap-12 inline-flex">
             <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex">
               <div className="w-[102px] h-7 relative">
@@ -65,7 +72,7 @@ export default function Experience() {
             </div>
           </div>
         </div>
-        <div className="w-[896px] h-72 p-8 bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">
+        <div className=" h-72 p-8 bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">
           <div className="self-stretch justify-start items-start gap-12 inline-flex">
             <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex">
               <div className="w-[102px] h-7 relative">
@@ -108,7 +115,7 @@ export default function Experience() {
             </div>
           </div>
         </div>
-        <div className="w-[896px] h-72 p-8 bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">
+        <div className=" h-72 p-8 bg-white rounded-xl shadow flex-col justify-start items-start inline-flex">
           <div className="self-stretch justify-start items-start gap-12 inline-flex">
             <div className="grow shrink basis-0 flex-col justify-start items-start gap-3 inline-flex">
               <div className="w-[102px] h-7 relative">

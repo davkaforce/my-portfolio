@@ -1,7 +1,9 @@
+import { useTheme } from "@/content/ThemeContext";
+
 export default function Skills() {
   return (
-    <div className="flex flex-col justify-center items-center self-stretch px-20 py-24">
-      <div className="w-[1280px] h-[238px] px-8 flex-col justify-start items-start gap-12 inline-flex">
+    <div className=" flex flex-col justify-center items-center px-20 py-24">
+      <div className=" h-[238px] px-8 flex-col justify-start items-start gap-12 inline-flex">
         <div className="self-stretch h-[72px] flex-col justify-start items-start gap-4 flex">
           <div className="self-stretch h-7 flex-col justify-center items-center flex">
             <svg

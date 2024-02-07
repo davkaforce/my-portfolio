@@ -1,16 +1,23 @@
 import Icon1 from "./icons/Icon1";
 import Icon2 from "./icons/Icon2";
 import Icon3 from "./icons/Icon3";
+import { useTheme } from "@/content/ThemeContext";
 
 export default function Hero() {
+  const { theme } = useTheme();
   return (
-    <div class="w-[1440px] h-[552px] px-8 justify-start items-start gap-12 inline-flex">
-      <div class="self-stretch flex-col justify-center items-start gap-12 inline-flex">
-        <div class="self-stretch h-[152px] flex-col justify-center items-start gap-2 flex">
+    <div
+      id="Hero"
+      className={` ${
+        theme == "dark" ? "" : " bg-gray-50 "
+      } flex flex-col-reverse sm:flex-row gap-12 px-8 justify-start items-start self-stretch grow shrink`}
+    >
+      <div class=" grow shrink self-stretch flex-col justify-center items-start gap-12 inline-flex text-wrap flex-wrap">
+        <div class="self-stretch flex-col justify-center items-start gap-2 flex">
           <div class="text-gray-900 text-6xl font-bold font-['Inter'] leading-[72px]">
             Hi, I’m Itachi Uchiha ✇
           </div>
-          <div class="w-[768px] text-gray-600 text-base font-normal font-['Inter'] leading-normal">
+          <div class=" text-gray-600 text-base font-normal font-['Inter'] leading-normal">
             I'm a member of the Uchiha Clan from the village of Konohagakure and
             the elder brother of Sasuke Uchiha. I grew up as the child prodigy
             of the Uchiha clan, establishing milestones for not only Sasuke, but
@@ -39,7 +46,7 @@ export default function Hero() {
           <Icon3 />
         </div>
       </div>
-      <div class="grow shrink basis-0 self-stretch flex-col justify-center items-end inline-flex">
+      <div class="grow shrink basis-0 self-stretch flex-col justify-center flex">
         <div class="w-80 h-[360px] relative">
           <div class="w-[280px] h-80 left-[40px] top-[40px] absolute bg-gray-200 border-8 border-white"></div>
           <img

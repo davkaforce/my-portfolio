@@ -1,7 +1,7 @@
 export default function WorkText() {
   return (
     <div>
-      <div className="w-[576px] h-[480px] p-12 rounded-tl-xl rounded-bl-xl flex-col justify-start items-center gap-6 inline-flex">
+      <div className=" h-[480px] p-12 rounded-tl-xl rounded-bl-xl flex-col justify-start items-center gap-6 inline-flex">
         <div className="self-stretch text-gray-900 text-xl font-semibold font-['Inter'] leading-7">
           Fiskil
         </div>
